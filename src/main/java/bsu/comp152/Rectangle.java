@@ -1,5 +1,7 @@
 package bsu.comp152;
 
+import org.w3c.dom.css.Rect;
+
 import java.util.Objects;
 
 /**
@@ -25,9 +27,19 @@ public class Rectangle {
      * A constructor is public.
      * A constructor has no return type, not even void!
      */
-    public Rectangle(double len, double wid){
-        length = len;
-        width = wid;
+    public Rectangle(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
+
+    public Rectangle(){
+        length = 0.0;
+        width = 0.0;
+    }
+
+    public Rectangle(Rectangle other){
+        length = other.length;
+        width = other.width;
     }
 
     /**

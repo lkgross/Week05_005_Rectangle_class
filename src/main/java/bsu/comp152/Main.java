@@ -50,5 +50,43 @@ public class Main {
         Rectangle rect2 = new Rectangle(12.2, 3.17);
 
         System.out.println(rect.equals(rect2));
+
+        Rectangle rect3 = new Rectangle();
+        System.out.println(rect3);
+
+        /*
+         * What happens if we use == for objects (reference variables)? We compare the memory addresses instead of the data in the objects themselves. DON'T DO THIS. Call an equals method.
+         */
+
+        System.out.printf("The rectangles rect and rect2 are the same: %b\n", rect == rect2);
+
+        System.out.printf("The rectangles rect and rect2 are the same: %b\n", rect.equals(rect2));
+
+        /* Similarly, don't do a "reference copy". You get unintended consequences if you do:
+
+         */
+        Rectangle rect4 = rect;
+        /*
+         * Don't do the reference copy as above because if you change rect4, rect will also change. If you change rect, rect4 will also change.
+         */
+
+        System.out.println(rect4);
+        rect4.setLength(24.55);
+        System.out.println(rect4);
+        System.out.println(rect);
+
+        /*
+         * One solution to avoid a reference copy is to write a copy constructor.
+         */
+
+        Rectangle rect5 = new Rectangle(rect);
+
+        /* Now, if we change rect5, rect is unchanged.
+         * If we change rect, rect5 is unchanged.
+         */
+
+
+
+
     }
 }
