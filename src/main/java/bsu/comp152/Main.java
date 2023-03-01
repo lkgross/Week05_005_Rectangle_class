@@ -1,6 +1,6 @@
 package bsu.comp152;
 
-import org.w3c.dom.css.Rect;
+import java.util.ArrayList;
 
 /**
  * A (container) class for the program.
@@ -85,8 +85,11 @@ public class Main {
          * If we change rect, rect5 is unchanged.
          */
 
+        Rectangle rect6 = rect.copy();
 
+        ArrayList<Rectangle> rectangleList = new ArrayList<Rectangle>();
 
-
+        rectangleList.add(rect);
+        rectangleList.add(rect6);
     }
 }

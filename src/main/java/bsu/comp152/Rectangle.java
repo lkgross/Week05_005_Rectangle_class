@@ -27,16 +27,28 @@ public class Rectangle {
      * A constructor is public.
      * A constructor has no return type, not even void!
      */
+
+    /*
+     * We can name the parameters len and wid, or we can give them the same names as the instance variables length and width. If the parameter has the same name as the instance variable, then use the reference variable this to identify the instance variable.
+     */
     public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
     }
+
+    /*
+     * We can overload methods (including constructors):
+     * We can have two or more methods with the same name, as long as "signatures" differ. The signature consists of the method's name and the types of the method's parameters, in the order that they appear. (The method's return type is not part of the signature.)
+     */
 
     public Rectangle(){
         length = 0.0;
         width = 0.0;
     }
 
+    /*
+     * This is a copy constructor.
+     */
     public Rectangle(Rectangle other){
         length = other.length;
         width = other.width;
@@ -79,5 +91,10 @@ public class Rectangle {
 
     public void setWidth(double wid){
         width = wid;
+    }
+
+    public Rectangle copy(){
+        Rectangle r = new Rectangle(length, width);
+        return r;
     }
 }
