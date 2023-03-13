@@ -91,5 +91,16 @@ public class Main {
 
         rectangleList.add(rect);
         rectangleList.add(rect6);
+
+        System.out.println(rect5);
+        System.out.println(rect6);
+        System.out.printf("Rect6 is square: %b\n", rect6.isSquare());
+        rect6.setWidth(24.55);
+        System.out.println(rect6);
+        System.out.printf("Rect6 is square: %b\n", rect6.isSquare());
+        System.out.println("Area of rect6: " + rect6.getArea());
+        System.out.println(rect5);
+        rect5.rotate();
+        System.out.println(rect5);
     }
 }

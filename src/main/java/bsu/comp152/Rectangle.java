@@ -66,19 +66,30 @@ public class Rectangle {
         return width;
     }
 
+    public boolean isSquare(){
+        return length == width;
+    }
+
+    public double getArea(){
+        return length*width;
+    }
+
+    public void rotate(){
+        double temp = length;
+        length = width;
+        width = temp;
+    }
+
     @Override
     public String toString(){
         return String.format("Rectangle: length %f, width %f", length, width);
     }
 
+
+
     public boolean equals(Rectangle other) {
         return (length == other.length) &&
                 (width == other.width);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(length, width);
     }
 
     /**
