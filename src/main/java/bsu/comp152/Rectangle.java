@@ -42,8 +42,7 @@ public class Rectangle {
      */
 
     public Rectangle(){
-        length = 0.0;
-        width = 0.0;
+        this(0, 0);
     }
 
     /*
